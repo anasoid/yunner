@@ -49,10 +49,7 @@ jobs:
         run: ./gradlew --stacktrace --console=verbose dependencyUpdates -Drevision=release -DoutputFormatter=plain,html
 
       - name: Build with Gradle
-        run: ./gradlew --stacktrace --console=verbose -x test build
-
-      - name: Test with Gradle
-        run: ./gradlew --stacktrace --console=verbose test
+        run: ./gradlew --stacktrace --console=verbose build
 
 
       - name: Publish artifact Test Report
