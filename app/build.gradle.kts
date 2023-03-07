@@ -4,6 +4,8 @@
 
 plugins {
     id("org.anasoid.yunner.kotlin-application-conventions")
+    id("test-report-aggregation")
+    id("jacoco-report-aggregation")
 }
 
 dependencies {
@@ -14,4 +16,9 @@ dependencies {
 application {
     // Define the main class for the application.
     mainClass.set("org.anasoid.yunner.app.AppKt")
+}
+
+tasks.check {
+    dependsOn(tasks.named<TestReport>("testAggregateTestReport"))
+    dependsOn(tasks.named<JacocoReport>("testCodeCoverageReport"))
 }

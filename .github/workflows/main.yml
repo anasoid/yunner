@@ -60,4 +60,6 @@ jobs:
         if: always()
         with:
           name: reports
-          path: '**/build/reports/**'
+          path: |
+            app/build/reports/jacoco
+            app/build/reports/tests/unit-test
