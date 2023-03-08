@@ -6,11 +6,13 @@ plugins {
     id("org.anasoid.yunner.kotlin-application-conventions")
     id("test-report-aggregation")
     id("jacoco-report-aggregation")
+    id("org.sonarqube") version "3.5.0.2730"
 }
 
 dependencies {
     implementation("org.apache.commons:commons-text")
-    implementation(project(":utilities"))
+    implementation(project(":yaml"))
+    implementation(project(":core"))
 }
 
 application {

@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "yunner"
-include("app", "list", "utilities")
+include("app", "yaml", "core")
